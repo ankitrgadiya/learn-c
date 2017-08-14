@@ -1,0 +1,9 @@
+image: gcc:latest
+
+test:
+  stage: test
+  script:
+  - make
+  only:
+  - master
+
