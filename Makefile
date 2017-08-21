@@ -25,6 +25,7 @@ all:
 	$(MAKE) -C Chapter14/exercise
 	$(MAKE) -C Chapter16/example
 	$(MAKE) -C Chapter16/exercise
+	$(MAKE) -C Chapter17/example
 
 clean:
 	$(MAKE) clean -C Chapter3/example
@@ -53,3 +54,4 @@ clean:
 	$(MAKE) clean -C Chapter14/example
 	$(MAKE) clean -C Chapter16/example
 	$(MAKE) clean -C Chapter16/exercise
+	$(MAKE) clean -C Chapter17/example
