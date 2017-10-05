@@ -1,5 +1,12 @@
-all:
-	cc prog14.1.c -o prog14.1
+CC     = gcc
+CFLAGS =
+SOURCE = $(wildcard *.c)
+EXE    = $(SOURCE:.c=)
+
+all: $(EXE)
+
+$(EXE):
+	$(CC) $(CFLAGS) -o $@ $@.c
 
 clean:
-	rm prog14.1
+	rm $(EXE)

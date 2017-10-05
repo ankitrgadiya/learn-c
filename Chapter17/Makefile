@@ -1,5 +1,5 @@
-CC=gcc
-DIRS = $(wildcard ./*)
+CC   = gcc
+DIRS = example
 
 .PHONY: all
 all:
@@ -8,4 +8,3 @@ all:
 .PHONY: clean
 clean:
 	@for each in $(DIRS); do $(MAKE) clean -C $$each; done
-

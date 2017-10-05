@@ -1,7 +1,12 @@
-all:
-	gcc -Wall -Werror e1.c -o e1
-	gcc -Wall -Werror e2.c -o e2
-	gcc -Wall -Werror e3.c -o e3
+CC     = gcc
+CFLAGS = -Wall -Werror
+SOURCE = $(wildcard *.c)
+EXE    = $(SOURCE:.c=)
+
+all: $(EXE)
+
+$(EXE):
+	$(CC) $(CFLAGS) -o $@ $@.c
 
 clean:
-	rm e1 e2 e3
+	rm $(EXE)

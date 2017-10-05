@@ -1,7 +1,12 @@
-all:
-	gcc -Wall -Werror prog16.1.c -o prog16.1
-	gcc -Wall -Werror prog16.2.c -o prog16.2
-	gcc -Wall -Werror prog16.3.c -o prog16.3
+CC     = gcc
+CFLAGS = -Wall -Werror
+SOURCE = $(wildcard *.c)
+EXE    = $(SOURCE:.c=)
+
+all: $(EXE)
+
+$(EXE):
+	$(CC) $(CFLAGS) -o $@ $@.c
 
 clean:
-	rm prog16.1 prog16.2 prog16.3
+	rm $(EXE)
