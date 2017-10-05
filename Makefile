@@ -1,5 +1,5 @@
 CC=gcc
-DIRS = $(wildcard ./*)
+DIRS = $(wildcard ./Chapter*)
 
 .PHONY: all
 all:
